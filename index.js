@@ -1,16 +1,16 @@
 const { Telegraf, session, Markup, Scenes } = require("telegraf");
-const env = require("../Netflix/src/env");
+const env = require("./src/env");
 const admin = env.admin;
 //Connect to Mongodb and then Launch Bot:
-const bot = require("../src/command.js")
-const mongo = require("../Netflix/src/functions/mongoClient");
-const { db } = require("../Netflix/src/functions/mongoClient");
-const { starter } = require('../Netflix/src/functions/starter');
+const bot = require("./src/command.js")
+const mongo = require("./src/functions/mongoClient");
+const { db } = require("./src/functions/mongoClient");
+const { starter } = require('./src/functions/starter');
 
 const { profit, curr, findUser, findUserCallback, sendError, sendInlineError, mustJoin, isNumeric, globalBroadCast } = require("../Netflix/src/functions/misc.js");
 
 
-const withComp = require('../Netflix/src/commands/withdraw').bot
+const withComp = require('./src/commands/withdraw').bot
 
 bot.use(session());
 
